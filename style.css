@@ -1,0 +1,980 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  list-style: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Mine";
+  src: url("Poppins-Regular.ttf");
+}
+nav {
+  background-color: black;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0px;
+}
+nav ul li {
+  height: 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Mine";
+  font-size: 20px;
+  font-weight: 500;
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+nav ul .menuButton {
+  display: none;
+}
+nav a:hover {
+  color: rgb(23, 145, 200);
+}
+nav li:first-child {
+  margin-right: auto;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+nav .sidebar li {
+  width: 100%;
+}
+nav .sidebar li a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-family: "Mine";
+  font-size: 30px;
+  font-weight: 500;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+#Home {
+  overflow: hidden;
+  background-image: url("LOGO.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  background-color: black;
+}
+#Home h2 {
+  color: white;
+  position: absolute;
+  right: 1%;
+  top: 40%;
+  font-family: "Mine";
+  font-size: 25px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Home h2 i {
+  padding: 5px;
+}
+#Home .resume {
+  background-color: white;
+  width: 300px;
+  height: 80px;
+  border: 1px solid white;
+  border-radius: 0 50px 50px 0;
+  position: absolute;
+  left: 0%;
+  top: 40%;
+  font-family: "Mine";
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Home .resume i {
+  padding: 10px;
+  background-color: black;
+  border: 1px solid rgb(148, 148, 148);
+  border-radius: 50%;
+}
+#Home .resume p {
+  margin: 10px;
+}
+#Home .name {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  animation: marquee 10s linear infinite;
+  transform-origin: bottom center;
+}
+#Home .name h1 {
+  font-family: "Mine";
+  font-size: 100px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.2);
+  padding: 0 10px;
+}
+#Home .name .lines {
+  height: 5px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0 5px 0 5px;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#About {
+  padding: 30px 30px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#About .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#About .container p {
+  width: 80%;
+  font-family: "Mine";
+  font-size: 20px;
+  font-weight: 300;
+}
+#About .container img {
+  height: 50vh;
+  width: 50%;
+  border-radius: 20px;
+}
+#About .container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 140px;
+  margin: 10px 0 20px;
+  padding: 5px;
+  background-color: rgb(23, 145, 200);
+  color: black;
+  font-family: "Mine";
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#About .container button:hover {
+  letter-spacing: 2px;
+  border-style: none;
+}
+#About h1 {
+  font-family: "Mine";
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px;
+}
+#About .aboutme {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("IMG-20240405-WA0108.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  opacity: 0;
+  transform-origin: top left;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+#About .aboutme.slide-in {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+#About .aboutme-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 999;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+#About .aboutme-content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100px;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: rgb(23, 145, 200);
+  color: rgba(0, 0, 0, 0.904);
+  font-family: "Mine";
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#About .aboutme-content button:hover {
+  letter-spacing: 2px;
+  border-style: none;
+}
+
+#Work {
+  background-color: #212121;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+}
+#Work h1 {
+  font-family: "Mine";
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 20px 30px 20px;
+  color: white;
+  text-align: center;
+}
+#Work .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#Work .card {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin: 10px 0;
+  transition: ease all 2.3s;
+  perspective: 1200px;
+}
+#Work .card:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg);
+}
+#Work .card:hover .cover:before {
+  transform: translateZ(30px);
+}
+#Work .card:hover .cover:after {
+  background-color: black;
+}
+#Work .card:hover .cover h1 {
+  transform: translateZ(100px);
+}
+#Work .card:hover .cover a {
+  transform: translateZ(-60px) rotatey(-180deg);
+}
+#Work .card .cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#Work .card .cover:before {
+  content: "";
+  position: absolute;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all 2.3s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+#Work .card .cover:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(0, 0, 0, 0.4);
+}
+#Work .card .cover.item-a {
+  background-image: url("Group 9.png");
+}
+#Work .card .cover.item-b {
+  background-image: url("portfolio-4.jpg");
+}
+#Work .card .cover.item-c {
+  background-image: url("avataaars.svg");
+}
+#Work .card .cover.item-d {
+  background-image: url("IMG-20240502-WA0063.jpg");
+}
+#Work .card .cover h1 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 55px;
+  left: 40px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 3;
+  font-size: 45px;
+  transform: translateZ(0px);
+}
+#Work .card .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0b0f08;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  transform: translateZ(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Work .card .card-back a {
+  transform-style: preserve-3d;
+  transition: ease transform 2.3s ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  background: transparent;
+  border: 1px solid white;
+  font-weight: 200;
+  font-size: 1.3em;
+  color: white;
+  padding: 14px 32px;
+  outline: none;
+  text-decoration: none;
+}
+#Work .card .card-back a:hover {
+  background-color: white;
+  color: #0b0f08;
+}
+
+#Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mine";
+  font-size: 15px;
+  font-weight: 600;
+  padding: 30px;
+}
+#Contact h1 {
+  font-family: "Mine";
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 20px 10px 20px;
+  text-align: center;
+}
+#Contact .cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(223, 223, 223, 0);
+}
+#Contact form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Contact div, #Contact label, #Contact input, #Contact textarea {
+  width: 100%;
+}
+#Contact .field:nth-of-type(2) {
+  margin: 16px 0;
+}
+#Contact label, #Contact input, #Contact textarea {
+  padding: 8px;
+}
+#Contact label, #Contact [placeholder] {
+  color: black;
+}
+#Contact label i {
+  margin: 0 10px 0 0;
+}
+#Contact .field:focus-within label {
+  color: #000;
+  letter-spacing: 2px;
+}
+#Contact input, #Contact textarea {
+  background: rgb(33, 37, 41);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+#Contact input:focus, #Contact textarea:focus {
+  background: rgb(33, 37, 41);
+  border-style: none;
+}
+#Contact textarea {
+  resize: none;
+}
+#Contact ::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#Contact button {
+  background: rgb(23, 145, 200);
+  padding: 10px 20px;
+  margin: 16px 0 30px 0;
+  color: black;
+  font-family: "Mine";
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#Contact button:hover {
+  letter-spacing: 2px;
+  border-style: none;
+}
+#Contact .social-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 20px 0;
+}
+#Contact .social-media a {
+  margin: 0 10px;
+}
+#Contact .social-media:not(:first-child) {
+  font-size: 14px;
+}
+#Contact .social-media span {
+  font-size: 16px;
+}
+#Contact .social-media span .fas {
+  margin: 0 0 0 10px;
+}
+#Contact .social-media a {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.904);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Mine";
+  font-weight: 500;
+}
+.footer .socials {
+  margin: 5px 0;
+}
+.footer .socials a {
+  margin: 5px;
+  color: white;
+  font-size: 15px;
+  font-family: "Mine";
+  font-weight: 500;
+}
+.footer .socials a:hover {
+  color: rgb(23, 145, 200);
+}
+.footer .socials .copyright {
+  font-size: 15px;
+  font-family: "Mine";
+  font-weight: 500;
+  margin: 5px 0;
+  color: rgb(23, 145, 200);
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  nav ul .menuButton {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 575.98px) and (max-width: 767.98px) {
+  #Home {
+    background-size: contain;
+  }
+  #Home .resume {
+    left: 0%;
+    top: 67%;
+  }
+  #Home h2 {
+    right: 8%;
+    top: 18%;
+  }
+  #Home .name h1 {
+    font-size: 50px;
+  }
+  #About .aboutme p {
+    margin-bottom: 1rem;
+  }
+  #About .aboutme .aboutme-content {
+    padding: 1rem;
+  }
+  #About .aboutme .aboutme-content p {
+    margin-bottom: 0;
+  }
+  #Work .card .cover h1 {
+    font-weight: 600;
+    position: absolute;
+    bottom: 55px;
+    left: 7px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    z-index: 3;
+    font-size: 20px;
+    transform: translateZ(0px);
+  }
+  #Work {
+    background-color: #212121;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+  #Work .row > * {
+    flex-shrink: 0;
+    width: 50%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+  #Work .card {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 10px 0;
+    transition: ease all 2.3s;
+    perspective: 1200px;
+  }
+  #Work .card:hover .cover {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+  #Work .card:hover .cover:before {
+    transform: translateZ(30px);
+  }
+  #Work .card:hover .cover:after {
+    background-color: black;
+  }
+  #Work .card:hover .cover h1 {
+    transform: translateZ(100px);
+  }
+  #Work .card:hover .cover a {
+    transform: translateZ(-60px) rotatey(-180deg);
+  }
+  #Work .card .cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #Work .card .cover:before {
+    content: "";
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all 2.3s;
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+  }
+  #Work .card .cover:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  #Work .card .cover.item-a {
+    background-image: url("Group 9.png");
+  }
+  #Work .card .cover.item-b {
+    background-image: url("portfolio-4.jpg");
+  }
+  #Work .card .cover.item-c {
+    background-image: url("avataaars.svg");
+  }
+  #Work .card .cover.item-d {
+    background-image: url("IMG-20240502-WA0063.jpg");
+  }
+  #Work .card .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0b0f08;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #Work .card .card-back a {
+    transform-style: preserve-3d;
+    transition: ease transform 2.3s ease background 0.5s;
+    transform: translateZ(-1px) rotatey(-180deg);
+    background: transparent;
+    border: 1px solid white;
+    font-weight: 200;
+    font-size: 1em;
+    color: white;
+    padding: 3px 10px;
+    outline: none;
+    text-decoration: none;
+  }
+  #Work .card .card-back a:hover {
+    background-color: white;
+    color: #0b0f08;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  #Home {
+    background-size: contain;
+  }
+  #Home .resume {
+    top: 69%;
+  }
+  #Home h2 {
+    top: 11%;
+  }
+  #About .aboutme-content {
+    max-width: 352px;
+    padding: 1rem;
+  }
+  #About .aboutme-content p {
+    font-size: 19px;
+  }
+  #Work {
+    background-color: #212121;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+  #Work .row > * {
+    flex-shrink: 0;
+    width: 50%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+  #Work .card {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 10px 0;
+    transition: ease all 2.3s;
+    perspective: 1200px;
+  }
+  #Work .card:hover .cover {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+  #Work .card:hover .cover:before {
+    transform: translateZ(30px);
+  }
+  #Work .card:hover .cover:after {
+    background-color: black;
+  }
+  #Work .card:hover .cover h1 {
+    transform: translateZ(100px);
+  }
+  #Work .card:hover .cover a {
+    transform: translateZ(-60px) rotatey(-180deg);
+  }
+  #Work .card .cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #Work .card .cover:before {
+    content: "";
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all 2.3s;
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+  }
+  #Work .card .cover:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  #Work .card .cover.item-a {
+    background-image: url("Group 9.png");
+  }
+  #Work .card .cover.item-b {
+    background-image: url("portfolio-4.jpg");
+  }
+  #Work .card .cover.item-c {
+    background-image: url("avataaars.svg");
+  }
+  #Work .card .cover.item-d {
+    background-image: url("IMG-20240502-WA0063.jpg");
+  }
+  #Work .card .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0b0f08;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #Work .card .card-back a {
+    transform-style: preserve-3d;
+    transition: ease transform 2.3s ease background 0.5s;
+    transform: translateZ(-1px) rotatey(-180deg);
+    background: transparent;
+    border: 1px solid white;
+    font-weight: 200;
+    font-size: 1em;
+    color: white;
+    padding: 3px 10px;
+    outline: none;
+    text-decoration: none;
+  }
+  #Work .card .card-back a:hover {
+    background-color: white;
+    color: #0b0f08;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  #Home {
+    background-size: contain;
+  }
+  #Home .resume {
+    top: 69%;
+  }
+  #Home h2 {
+    top: 11%;
+  }
+  #About .aboutme-content {
+    max-width: 352px;
+    padding: 1rem;
+  }
+  #About .aboutme-content p {
+    font-size: 19px;
+  }
+  #Work {
+    background-color: #212121;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+  #Work .row > * {
+    flex-shrink: 0;
+    width: 50%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+  #Work .card {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 10px 0;
+    transition: ease all 2.3s;
+    perspective: 1200px;
+  }
+  #Work .card:hover .cover {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+  #Work .card:hover .cover:before {
+    transform: translateZ(30px);
+  }
+  #Work .card:hover .cover:after {
+    background-color: black;
+  }
+  #Work .card:hover .cover h1 {
+    transform: translateZ(100px);
+  }
+  #Work .card:hover .cover a {
+    transform: translateZ(-60px) rotatey(-180deg);
+  }
+  #Work .card .cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #Work .card .cover:before {
+    content: "";
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all 2.3s;
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+  }
+  #Work .card .cover:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  #Work .card .cover.item-a {
+    background-image: url("Group 9.png");
+  }
+  #Work .card .cover.item-b {
+    background-image: url("portfolio-4.jpg");
+  }
+  #Work .card .cover.item-c {
+    background-image: url("avataaars.svg");
+  }
+  #Work .card .cover.item-d {
+    background-image: url("IMG-20240502-WA0063.jpg");
+  }
+  #Work .card .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0b0f08;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #Work .card .card-back a {
+    transform-style: preserve-3d;
+    transition: ease transform 2.3s ease background 0.5s;
+    transform: translateZ(-1px) rotatey(-180deg);
+    background: transparent;
+    border: 1px solid white;
+    font-weight: 200;
+    font-size: 1em;
+    color: white;
+    padding: 3px 10px;
+    outline: none;
+    text-decoration: none;
+  }
+  #Work .card .card-back a:hover {
+    background-color: white;
+    color: #0b0f08;
+  }
+}/*# sourceMappingURL=style.css.map */

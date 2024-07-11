@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDREY GIDEON PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+ 
+    <nav> 
+
+        <ul class="sidebar">
+             
+            <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Work">Work</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            
+       </ul>
+
+        <ul>
+             
+            <li><a href="#">PORTFOLIO</a></li>
+            <li class="hideOnMobile"><a href="#Home">Home</a></li>
+            <li class="hideOnMobile"><a href="#About">About</a></li>
+            <li class="hideOnMobile"><a href="#Work">Work</a></li>           
+            <li class="hideOnMobile"><a href="#Contact">Contact</a></li>
+            <li onclick=showSidebar()  class="menuButton"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+       </ul>
+
+    </nav>
+
+
+  <!-- NAVIGATION -->
+
+ <!-- HOME -->
+
+  <section id="Home">
+   
+    <h2> <i class="fa-solid fa-code"> </i> Front-end Web Developer </h2>
+
+      <div class="resume">
+
+        <p>Download CV</p>
+
+        <a href="AUDREY GIDEON.CV.pdf" id="myButton" target="_blank"><i class="fa-solid fa-download"></i></a>
+
+      </div> 
+
+      <div class="name">
+
+        <h1> Audrey </h1>  
+        
+        <h1> Gideon </h1>
+    
+        <span class="lines"> </span>  
+        
+        <h1> Audrey </h1>  
+        
+        <h1> Gideon </h1>
+    
+  </section> 
+
+  <!-- HOME -->
+ 
+
+  <!-- ABOUT -->
+  <section id="About">
+
+    
+    <h1>About me</h1>
+
+    <div class="container">      
+
+      <p>Audrey Gideon - Aspiring Web Developer</p>
+
+      <p>I craft engaging web experiences with a strong foundation in HTML, CSS, Bootstrap-5, JavaScript and React. 
+         Volunteering as a Scratch instructor fostered creativity in a number of students. 
+          Committed learner eager to collaborate and build impactful websites.</p>
+
+      <button id="learnMoreBtn">Learn More!</button>  
+      
+      
+
+      <!-- <img src="IMG-20240405-WA0108.jpg" alt="">   -->
+
+    </div> 
+    
+
+    <div class="aboutme" id="aboutMe">
+
+
+      <div class="aboutme-content">
+
+        <p> <b>What if your website could be more than just a page?</b> </p>
+
+          <br>
+
+       <p> I'm Audrey Gideon, an aspiring web developer with a passion for crafting engaging and interactive online experiences. 
+        My foundation in HTML, CSS, and JavaScript fuels my drive to build websites that not only look great but also function flawlessly.
+        Beyond technical skills, I believe in the power of collaboration.</p>
+        
+        <br>
+        <p> My experience as a volunteer Scratch instructor at Uncommon.org has
+        allowed me to share my knowledge with students, fostering their creativity and problem-solving abilities.       
+        This experience, coupled with completing a project management course in Agile and Waterfall methodologies, 
+        has equipped me with the skills to seamlessly navigate any project, big or small. </p>
+       <br>
+        <p>I'm a continuous learner, always eager to expand my skillset and tackle new challenges. I'm confident that my technical expertise 
+        and project management abilities, combined with my collaborative spirit, will be a valuable asset to any team.</p>
+        <br>
+        <button id="backButton" onclick=hideAbout()>Back</button>   
+        
+      </div>
+    </div>     
+
+  </section>
+
+<!-- ABOUT -->
+
+
+ <!-- WORK -->
+
+ <section id="Work">
+
+  <h1>My Work</h1>
+
+  <div class="row">
+		<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="card">
+				<div class="cover item-a">
+					<h1>Nowalls<br>Africa</h1>
+					
+					<div class="card-back">
+						<a href="https://lizzyaudreygideon.github.io/NowallsPanAfrica-Website/">View In Browser</a>
+					</div>
+				</div>
+			</div>
+		</div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="card">
+				<div class="cover item-b">
+					<h1>Stylish<br>Portfolio</h1>
+					
+					<div class="card-back">
+						<a href="https://lizzyaudreygideon.github.io/STYLISH-PORTFOLIO/">View In Browser</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="card">
+				<div class="cover item-c">
+					<h1>Start<br>Bootstrap</h1>
+					
+					<div class="card-back">
+            <a href="https://lizzyaudreygideon.github.io/BOOTSTRAP-website/" target="_blank">View In Browser</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="card">
+				<div class="cover item-d">
+					<h1>Tigzozo<br>Project</h1>					
+					<div class="card-back">
+						<a href="https://lizzyaudreygideon.github.io/Tigzozo-Project/" target="_blank">View In Browser</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+ </section>
+
+  <!-- WORK -->
+
+
+  <!-- CONTACT -->
+  <section id="Contact">
+
+    <h1>Lets Connect</h1>
+
+    <div class="cont">
+      <form>
+        <div class="field" tabindex="1">
+          <label for="username">
+            <i class="far fa-user"></i>Your Name
+          </label>
+          <input name="username" type="text" placeholder="e.g. lizzy tumba" required>
+        </div>
+        <div class="field" tabindex="2">
+          <label for="email">
+            <i class="far fa-envelope"></i>Your Email
+          </label>
+          <input name="email" type="text" placeholder="email@domain.com" required>
+        </div>
+        <div class="field" tabindex="3">
+          <label for="message">
+            <i class="far fa-edit"></i>Your Message
+          </label>
+          <textarea name="message" placeholder="type here" required></textarea>
+        </div>
+        <button type="reset">Message Me</button>
+        <div class="social-media">
+          <span>
+            Get In Touch<i class="fas fa-long-arrow-alt-right"></i>
+          </span>          
+          <a class="fab fa-discord" href="" target="blank_"></a>
+          <a class="fab fa-linkedin" href="" target="blank_"></a>
+          <!-- <a class="fab fa-facebook-f" href="" target="blank_"></a> -->
+           <!-- <a class="fab fa-instagram" href="" target="blank_"></a> -->
+
+        </div>
+      </form>
+    </div>
+    
+
+  </section>
+  
+
+  <!-- CONTACT -->
+
+   <!--FOOTER  -->
+      
+   <section class="footer">
+
+    <div class="socials">
+      <a  href="" target="blank_"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <p class="copyright">&copy;2024 Audrey Lizzy Gideon</p>
+
+   </section>
+
+   <!-- FOOTER -->
+
+   
+</body>
+<script src="style.js"></script>
+</html>
