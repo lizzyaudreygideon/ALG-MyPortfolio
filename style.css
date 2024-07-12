@@ -985,4 +985,12 @@ nav .sidebar li a {
     background-color: white;
     color: #0b0f08;
   }
+}
+@media only screen and (min-width: 1440px) {
+  #Work {
+    height: 76vh;
+  }
+  #Work h1 {
+    margin: 40px 20px 30px 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

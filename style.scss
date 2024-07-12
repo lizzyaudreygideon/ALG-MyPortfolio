@@ -1204,5 +1204,12 @@ $ordinary: rgb(255, 255, 255, 0.2);
 
     
 
-    @media  only screen and (min-width:1440px) {}
+    @media  only screen and (min-width:1440px) {
+       #Work{
+        height: 76vh;
+        h1{
+            margin: 40px 20px 30px 20px;
+        }
+       }
+    }
 
