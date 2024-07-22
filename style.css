@@ -441,6 +441,7 @@ nav .sidebar li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 #Contact div, #Contact label, #Contact input, #Contact textarea {
   width: 100%;
@@ -466,9 +467,10 @@ nav .sidebar li a {
   border: none;
   border-radius: 4px;
   padding: 8px;
+  color: white;
 }
 #Contact input:focus, #Contact textarea:focus {
-  background: rgb(33, 37, 41);
+  background: rgb(205, 210, 215);
   border-style: none;
 }
 #Contact textarea {
@@ -515,6 +517,7 @@ nav .sidebar li a {
 }
 #Contact .social-media span {
   font-size: 16px;
+  color: #000;
 }
 #Contact .social-media span .fas {
   margin: 0 0 0 10px;
@@ -585,6 +588,7 @@ nav .sidebar li a {
   #Home h2 {
     right: 8%;
     top: 18%;
+    font-size: 20px;
   }
   #Home .name h1 {
     font-size: 50px;
@@ -607,7 +611,7 @@ nav .sidebar li a {
     transform-style: preserve-3d;
     transition: ease all 2.3s;
     z-index: 3;
-    font-size: 20px;
+    font-size: 18px;
     transform: translateZ(0px);
   }
   #Work {

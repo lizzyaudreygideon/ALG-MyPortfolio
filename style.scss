@@ -535,6 +535,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
     }
     
     div, label, input, textarea {
@@ -567,10 +568,12 @@ $ordinary: rgb(255, 255, 255, 0.2);
     border: none;
     border-radius: 4px;
     padding: 8px;
+    color: white;
+    
     }
     
     input:focus, textarea:focus {
-    background: rgba(33, 37, 41, 1);
+    background: rgb(205 210 215);
     border-style: none;
     }
     
@@ -624,6 +627,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
     
     .social-media span {
     font-size: 16px;
+    color: #000;
     }
     
     .social-media span .fas {
@@ -713,7 +717,8 @@ $ordinary: rgb(255, 255, 255, 0.2);
 
            h2 {           
             right: 8%;
-            top: 18%;            
+            top: 18%;  
+            font-size: 20px;          
            }
 
            .name h1 {
@@ -745,7 +750,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
             transform-style: preserve-3d;
             transition: ease all 2.3s;
             z-index: 3;
-            font-size: 20px;
+            font-size: 18px;
             transform: translateZ(0px);
         }
 
