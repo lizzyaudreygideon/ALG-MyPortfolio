@@ -372,6 +372,12 @@ nav .sidebar li a {
 #Work .card .cover.item-e {
   background-image: url("image 54.png");
 }
+#Work .card .cover.item-f {
+  background-image: url("favicon1.jpg");
+}
+#Work .card .cover.item-g {
+  background-image: url("favicon.png");
+}
 #Work .card .cover h1 {
   font-weight: 600;
   position: absolute;
