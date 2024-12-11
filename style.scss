@@ -48,7 +48,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
                     padding: 0 30px;
                     display: flex;
                     align-items: center;
-
+                    transition: color 0.3s ease, transform 0.3s ease;
                 }
 
             }
@@ -60,6 +60,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
 
         a:hover{
             color: $primary;
+            transform: scale(1.1);
         } 
 
         li:first-child{
@@ -78,9 +79,19 @@ $ordinary: rgb(255, 255, 255, 0.2);
             box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
             display: none;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-start;
-           
+
+            li:first-child {
+                float: right;
+                margin: 40px;
+                
+            }
+            li:not(:first-child) {
+                margin: 10px;
+                font-weight: 900;
+            }
+            
 
             li{
                 width: 100%;
@@ -96,9 +107,24 @@ $ordinary: rgb(255, 255, 255, 0.2);
                     padding: 30px;
                     display: flex;
                     align-items: center;
-                    transition: 0.3s;
+                    transition: color 1s ease, transform 1s ease;
+                    animation: slideIn 0.5s ease-out forwards;
                 }
+                
+                @keyframes slideIn {
+                    from {
+                        opacity: 0;
+                        transform: translateX(-50px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                
             }
+
         }
 
        
@@ -130,6 +156,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        animation: fadeIn 1.2s ease-in-out;
 
         i{
            
@@ -154,7 +181,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
         display: flex;
         justify-content: center;
         align-items: center;
-
+        animation: bounce-in 0.8s ease-out forwards;
         i{
             padding: 10px;
             background-color: black;
@@ -166,14 +193,13 @@ $ordinary: rgb(255, 255, 255, 0.2);
             margin: 10px;
         }
 
-    }
+        }
 
     .name{
 
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        position: absolute;
         overflow: hidden;
         width: fit-content; 
         white-space: nowrap;
@@ -213,6 +239,31 @@ $ordinary: rgb(255, 255, 255, 0.2);
           transform: translateX(-100%);
         }
       }
+
+      @keyframes bounce-in {
+        0% {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+        60% {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+}
 }
 
 // ABOUT
@@ -295,19 +346,19 @@ $ordinary: rgb(255, 255, 255, 0.2);
     // z-index: 999;
     // display: none;
     opacity: 0;
+    transform: translateX(-100%);
     transform-origin: top left;
-    transform: scale(0.5);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+   
     
-  }
-  
-  .aboutme.slide-in {
+  &.slide-in {
     display: block;
     // opacity: 1;
     // transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
-    transform: scale(1);
   }
+}
           
 .aboutme-content {
             background-color: #fff;
@@ -341,6 +392,8 @@ $ordinary: rgb(255, 255, 255, 0.2);
                 button:hover {
                     letter-spacing: 2px;
                     border-style: none;
+                    transform: scale(1.1);
+                    transition: transform 0.3s ease;
                     }
           }   
           
@@ -356,16 +409,46 @@ $ordinary: rgb(255, 255, 255, 0.2);
         background-color: #212121;
 		width: 100%;
         // height: 100vh;
-        padding: 30px;
+        padding: 100px ;
 
         h1{
             font-family: "Mine";
             font-size: 40px;
             font-weight: 600;
             text-align: center;
-            margin: 20px 20px 30px 20px;
+            margin: 0px 0px 30px 0px;
             color: white;
             text-align: center;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            right: 0;
+            bottom: -92px;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-right: 15%;
+            margin-bottom: 1rem;
+            margin-left: 15%;
+        }
+
+        .carousel-indicators button {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #c7c5c5;
+            margin: 40px 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+          .carousel-indicators .active {
+            background-color: rgb(23, 145, 200);
+          }
+          .carousel-indicators button:hover {
+            transform: scale(1.2);
+            background-color: $primary;
         }
     
 		
@@ -544,8 +627,18 @@ $ordinary: rgb(255, 255, 255, 0.2);
     flex-direction: column;
     align-items: center;
     color: white;
+    animation: slide-up 0.6s ease-out forwards;
     }
-    
+    @keyframes slide-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
     div, label, input, textarea {
     width: 100%;
     }
@@ -626,6 +719,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
     }
     a{
         margin: 0 10px;
+        transition: transform 0.3s ease, color 0.3s ease;
     }
     }
     
@@ -648,6 +742,11 @@ $ordinary: rgb(255, 255, 255, 0.2);
     text-decoration: none;
     margin: 5px;
     }
+
+    .social-media a:hover {
+        transform: scale(1.2);
+        color: $primary;
+    }
     
 }
 
@@ -661,6 +760,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
     font-size: 15px;
     font-family: "Mine";
     font-weight: 500;
+    animation: fade-in-up 0.8s ease-in;
 
     .socials{
         margin: 5px 0;
@@ -685,7 +785,21 @@ $ordinary: rgb(255, 255, 255, 0.2);
             color: $primary;
         }
     }
+
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
 }
+
+
 
 
   @media (max-width:800px) {
@@ -705,6 +819,8 @@ $ordinary: rgb(255, 255, 255, 0.2);
   @media(max-width: 400px) {
     .sidebar {
         width: 100%;
+        transform: translateX(0);
+        opacity: 1;
     }
   }
 
@@ -753,7 +869,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
             font-weight: 600;
             position: absolute;
             bottom: 55px;
-            left: 7px;
+            left: 37px;
             color: white;
             transform-style: preserve-3d;
             transition: ease all 2.3s;
@@ -767,7 +883,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
          background-color: #212121;
          width: 100%;
          height: auto;
-         padding: 30px;
+         padding: 80px 30px;
             .row>* {
                 flex-shrink: 0;
                 width: 50%;
@@ -928,7 +1044,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
             background-color: #212121;
             width: 100%;
             height: auto;
-            padding: 30px;
+            padding: 80px 30px;
                .row>* {
                    flex-shrink: 0;
                    width: 50%;
@@ -1086,7 +1202,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
             background-color: #212121;
             width: 100%;
             height: auto;
-            padding: 30px;
+            padding: 80px 30px;
                .row>* {
                    flex-shrink: 0;
                    width: 50%;
@@ -1219,7 +1335,7 @@ $ordinary: rgb(255, 255, 255, 0.2);
 
     @media  only screen and (min-width:1440px) {
        #Work{
-        height: 76vh;
+        height: auto;
         h1{
             margin: 40px 20px 30px 20px;
         }

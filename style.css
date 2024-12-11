@@ -36,12 +36,14 @@ nav ul li a {
   padding: 0 30px;
   display: flex;
   align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 nav ul .menuButton {
   display: none;
 }
 nav a:hover {
   color: rgb(23, 145, 200);
+  transform: scale(1.1);
 }
 nav li:first-child {
   margin-right: auto;
@@ -59,8 +61,16 @@ nav .sidebar {
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
+}
+nav .sidebar li:first-child {
+  float: right;
+  margin: 40px;
+}
+nav .sidebar li:not(:first-child) {
+  margin: 10px;
+  font-weight: 900;
 }
 nav .sidebar li {
   width: 100%;
@@ -76,7 +86,18 @@ nav .sidebar li a {
   padding: 30px;
   display: flex;
   align-items: center;
-  transition: 0.3s;
+  transition: color 1s ease, transform 1s ease;
+  animation: slideIn 0.5s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #Home {
@@ -101,6 +122,7 @@ nav .sidebar li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 1.2s ease-in-out;
 }
 #Home h2 i {
   padding: 5px;
@@ -121,6 +143,7 @@ nav .sidebar li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: bounce-in 0.8s ease-out forwards;
 }
 #Home .resume i {
   padding: 10px;
@@ -135,7 +158,6 @@ nav .sidebar li a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: absolute;
   overflow: hidden;
   width: -moz-fit-content;
   width: fit-content;
@@ -168,6 +190,29 @@ nav .sidebar li a {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -234,14 +279,14 @@ nav .sidebar li a {
   background-repeat: no-repeat;
   background-position: top right;
   opacity: 0;
+  transform: translateX(-100%);
   transform-origin: top left;
-  transform: scale(0.5);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 #About .aboutme.slide-in {
   display: block;
+  transform: translateX(0);
   opacity: 1;
-  transform: scale(1);
 }
 #About .aboutme-content {
   background-color: #fff;
@@ -277,21 +322,51 @@ nav .sidebar li a {
 #About .aboutme-content button:hover {
   letter-spacing: 2px;
   border-style: none;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 #Work {
   background-color: #212121;
   width: 100%;
-  padding: 30px;
+  padding: 100px;
 }
 #Work h1 {
   font-family: "Mine";
   font-size: 40px;
   font-weight: 600;
   text-align: center;
-  margin: 20px 20px 30px 20px;
+  margin: 0px 0px 30px 0px;
   color: white;
   text-align: center;
+}
+#Work .carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: -92px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: 15%;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+}
+#Work .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #c7c5c5;
+  margin: 40px 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+#Work .carousel-indicators .active {
+  background-color: rgb(23, 145, 200);
+}
+#Work .carousel-indicators button:hover {
+  transform: scale(1.2);
+  background-color: rgb(23, 145, 200);
 }
 #Work .row {
   display: flex;
@@ -450,6 +525,17 @@ nav .sidebar li a {
   flex-direction: column;
   align-items: center;
   color: white;
+  animation: slide-up 0.6s ease-out forwards;
+}
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 #Contact div, #Contact label, #Contact input, #Contact textarea {
   width: 100%;
@@ -519,6 +605,7 @@ nav .sidebar li a {
 }
 #Contact .social-media a {
   margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 #Contact .social-media:not(:first-child) {
   font-size: 14px;
@@ -536,6 +623,10 @@ nav .sidebar li a {
   text-decoration: none;
   margin: 5px;
 }
+#Contact .social-media a:hover {
+  transform: scale(1.2);
+  color: rgb(23, 145, 200);
+}
 
 .footer {
   background-color: rgba(0, 0, 0, 0.904);
@@ -545,6 +636,7 @@ nav .sidebar li a {
   font-size: 15px;
   font-family: "Mine";
   font-weight: 500;
+  animation: fade-in-up 0.8s ease-in;
 }
 .footer .socials {
   margin: 5px 0;
@@ -566,6 +658,16 @@ nav .sidebar li a {
   margin: 5px 0;
   color: rgb(23, 145, 200);
 }
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 800px) {
   .hideOnMobile {
@@ -578,6 +680,8 @@ nav .sidebar li a {
 @media (max-width: 400px) {
   .sidebar {
     width: 100%;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 @media (max-width: 425px) {
@@ -614,7 +718,7 @@ nav .sidebar li a {
     font-weight: 600;
     position: absolute;
     bottom: 55px;
-    left: 7px;
+    left: 37px;
     color: white;
     transform-style: preserve-3d;
     transition: ease all 2.3s;
@@ -626,7 +730,7 @@ nav .sidebar li a {
     background-color: #212121;
     width: 100%;
     height: auto;
-    padding: 30px;
+    padding: 80px 30px;
   }
   #Work .row > * {
     flex-shrink: 0;
@@ -757,7 +861,7 @@ nav .sidebar li a {
     background-color: #212121;
     width: 100%;
     height: auto;
-    padding: 30px;
+    padding: 80px 30px;
   }
   #Work .row > * {
     flex-shrink: 0;
@@ -888,7 +992,7 @@ nav .sidebar li a {
     background-color: #212121;
     width: 100%;
     height: auto;
-    padding: 30px;
+    padding: 80px 30px;
   }
   #Work .row > * {
     flex-shrink: 0;
@@ -1000,7 +1104,7 @@ nav .sidebar li a {
 }
 @media only screen and (min-width: 1440px) {
   #Work {
-    height: 76vh;
+    height: auto;
   }
   #Work h1 {
     margin: 40px 20px 30px 20px;

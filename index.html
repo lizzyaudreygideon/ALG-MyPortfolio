@@ -18,11 +18,11 @@
 
         <ul class="sidebar">
              
-            <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+           <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li> 
             <li><a href="#Home">Home</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Work">Work</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Contact">Contact</a></li> 
             
        </ul>
 
@@ -133,84 +133,100 @@
 
   <h1>My Work</h1>
 
-  <div class="row">
-		<div class="col-md-4 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="cover item-a">
-					<h1>Nowalls<br>Africa</h1>
-					
-					<div class="card-back">
-						<a href="https://lizzyaudreygideon.github.io/NowallsPanAfrica-Website/" target="_blank">View In Browser</a>
-					</div>
-				</div>
-			</div>
-		</div>
-    <div class="col-md-4 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="cover item-b">
-					<h1>Stylish<br>Portfolio</h1>
-					
-					<div class="card-back">
-						<a href="https://lizzyaudreygideon.github.io/STYLISH-PORTFOLIO/" target="_blank">View In Browser</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="cover item-c">
-					<h1>Start<br>Bootstrap</h1>
-					
-					<div class="card-back">
-            <a href="https://lizzyaudreygideon.github.io/BOOTSTRAP-website/" target="_blank">View In Browser</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="cover item-d">
-					<h1>Tigzozo<br>Project</h1>					
-					<div class="card-back">
-						<a href="https://lizzyaudreygideon.github.io/Tigzozo-Project/" target="_blank">View In Browser</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <div class="col-md-4 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="cover item-e">
-					<h1>VanLife<br>Project</h1>					
-					<div class="card-back">
-						<a href="https://kambuzuma-vanlife.netlify.app/" target="_blank">View In Browser</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <div class="col-md-4 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="cover item-f">
-					<h1>Uncommon Scratch<br>Track</h1>					
-					<div class="card-back">
-						<a href="https://uncommonprogresstrack.netlify.app/" target="_blank">View In Browser</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <div class="col-md-4 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="cover item-g">
-					<h1>Unisex Hair<br>Saloon</h1>					
-					<div class="card-back">
-						<a href="https://kambuzuma-vanlife.netlify.app/" target="_blank">View In Browser</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> 
+  <div id="cardCarousel" class="carousel slide" >
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-6">
+            <div class="card">
+              <div class="cover item-a">
+                <h1>Nowalls<br>Africa</h1>
+                <div class="card-back">
+                  <a href="https://lizzyaudreygideon.github.io/NowallsPanAfrica-Website/" target="_blank">View In Browser</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card">
+              <div class="cover item-b">
+                <h1>Stylish<br>Portfolio</h1>
+                <div class="card-back">
+                  <a href="https://lizzyaudreygideon.github.io/STYLISH-PORTFOLIO/" target="_blank">View In Browser</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card">
+              <div class="cover item-c">
+                <h1>Start<br>Bootstrap</h1>
+                <div class="card-back">
+                  <a href="https://lizzyaudreygideon.github.io/BOOTSTRAP-website/" target="_blank">View In Browser</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-6">
+            <div class="card">
+              <div class="cover item-d">
+                <h1>Tigzozo<br>Project</h1>
+                <div class="card-back">
+                  <a href="https://lizzyaudreygideon.github.io/Tigzozo-Project/" target="_blank">View In Browser</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card">
+              <div class="cover item-e">
+                <h1>VanLife<br>Project</h1>
+                <div class="card-back">
+                  <a href="https://kambuzuma-vanlife.netlify.app/" target="_blank">View In Browser</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card">
+              <div class="cover item-f">
+                <h1>Uncommon Scratch<br>Track</h1>
+                <div class="card-back">
+                  <a href="https://uncommonprogresstrack.netlify.app/" target="_blank">View In Browser</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-6">
+            <div class="card">
+              <div class="cover item-g">
+                <h1>Unisex Hair<br>Saloon</h1>
+                <div class="card-back">
+                  <a href="https://kambuzuma-vanlife.netlify.app/" target="_blank">View In Browser</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
  </section>
 
